@@ -1,9 +1,9 @@
 # StupidPetTricks_I
 
 
-IDM 9013A: Programming Physical Objects
-Stupid Pet Tricks
-Weight:  15%
+#IDM 9013A: Programming Physical Objects
+##Stupid Pet Tricks
+###Weight:  15%
 
 **Stupid Pet Tricks** 
 **Presentation/Due → March 3**
@@ -17,7 +17,7 @@ Your project must respond to a physical action or series of actions a person tak
 Craftsmanship should have some attention paid to it.  While this project may not have perfect craftsmanship, it should be considered.
 
 
-Requirements:
+#Requirements:
 1.	Perfect circuit competence – appropriate resistors, electrical interfaces, wiring, colors, power supplies
 2.	A custom fabricated switch
 3.	Competent code – commented out, utilization of serial print statements
