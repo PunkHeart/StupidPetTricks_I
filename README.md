@@ -5,7 +5,8 @@ IDM 9013A: Programming Physical Objects
 Stupid Pet Tricks
 Weight:  15%
 
-Stupid Pet Tricks – Presentation/Due → March 3 
+**Stupid Pet Tricks** 
+**Presentation/Due → March 3**
 
 Using the skills you have learned thus far in class, create a physical computing project using both input and output.  Your project should have at least 2 forms of output (not including the off state) based on 2 forms or levels of input.  This does not mean that you must activate multiple things based on multiple sensors.  Rather, that you are evaluating your input and adjusting your output as a result.  (You can use multiple inputs and outputs if you like.)
 
