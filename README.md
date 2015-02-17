@@ -1,4 +1,4 @@
-# StupidPetTricks_I
+# StupidPetTricks I
 
 
 #IDM 9013A: Programming Physical Objects
@@ -13,6 +13,8 @@ Using the skills you have learned thus far in class, create a physical computing
 Think of having different behaviors that occurs once in a while. Think of different blink patterns. Perhaps these are based on different types of input, or different durations of input. It's possible to have one sensor and one load, with each having different states. For example, if I press my switch 3 times in a row, my light turns on for 3 minutes. If I press it 2 times, my light blinks, etc. etc.
 
 Your project must respond to a physical action or series of actions a person takes, and it must be amusing, surprising, or otherwise engaging. It doesn't have to be practical, or complex, as long it shows that you understand the basics of digital and analog I/O and how to use them.  You could consider this a quick prototype for a much larger project, or a proof of concept.
+
+Do not just copy code from the tutorials or the examples. Do not just copy the code and swap out a few variables. Manipulate and craft the code to your idea. If you find code from elsewhere to manipulate, make a reference to it in the comments.
 
 Craftsmanship should have some attention paid to it.  While this project may not have perfect craftsmanship, it should be considered.
 
