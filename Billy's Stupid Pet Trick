@@ -1,0 +1,36 @@
+// see documentation: http://mypunkheart.tumblr.com/tagged/physicalobjects
+
+const int photoPin = 7;  //define a pin for PHOTO RESISTOR
+const int doorHandlePin = 2; // define pin for the DOOR HANDLE switch
+int threshold = 250; //define cutoff for PHOTO RESISTOR 'switch'
+boolean doorHandleState = false; // define the starting DOOR HANDLE status (off)
+boolean lastState = false; // this is a counter
+boolean lightsOut = false; // 
+
+void setup(){
+    Serial.begin(9600);  // start serial
+    pinMode(13, OUTPUT); // define pinmode for the NIGHT LIGHT
+    pinMode(11, OUTPUT); // define pinmode for the BUZZER
+    pinMode(doorHandlePin, INPUT); // define pinmode for the DOOR HANDLE
+    pinMode(photoPin, INPUT); // define pinmode for the PHOTO RESISTOR
+}
+
+void loop(){
+    doorHandleState = !digitalRead(doorHandlePin); // read DOOR HANDLE
+    lightsOut = analogRead(photoPin) < threshold;
+    
+    if(lightsOut) {
+      if(doorHandleState) digitalWrite(13,LOW); // lights out when door is touched
+      else digitalWrite(13,HIGH); // turn light on when door is not touched
+    }
+    
+    else digitalWrite(13, LOW); // otherwise lights out
+    
+    if(doorHandleState&&!lastState) {
+      tone(11,6000,150);
+      Serial.println("Handle touched.");
+    }
+    
+    lastState=doorHandleState; // save the last state of the button
+
+}
