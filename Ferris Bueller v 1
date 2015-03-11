@@ -1,0 +1,34 @@
+const int photoPin = 7;  //define a pin for PHOTO RESISTOR
+const int doorHandlePin = 2; // define pin for the DOOR HANDLE switch
+int threshold = 250; //define cutoff for PHOTO RESISTOR 'switch'
+int doorHandleState = 0; // define the starting DOOR HANDLE status (off)
+
+void setup(){
+    Serial.begin(9600);  // start serial
+    pinMode(13, OUTPUT); // define pinmode for the LED
+    pinMode(11, OUTPUT); // define pinmode for the BUZZER
+    pinMode(doorHandlePin, INPUT); // define pinmode for the DOOR HANDLE
+    pinMode(photoPin, INPUT); // define pinmode for the PHOTO RESISTOR
+}
+
+void loop(){
+    doorHandleState = digitalRead(doorHandlePin); // read DOOR HANDLE
+    Serial.print(doorHandleState); Serial.println(" handle");
+      
+    while (doorHandleState == 0){
+      digitalWrite(13, LOW); // emergency lights off if mom touches the door
+      tone(11,2000,500);
+      delay(1000);
+      doorHandleState=digitalRead(doorHandlePin); // check the DOOR HANDLE again
+      }
+          
+    if(analogRead(photoPin) < threshold){
+      digitalWrite(13, HIGH); // if room is dark turn light on
+      Serial.println("LED ON"); 
+    }  
+    
+    if(analogRead(photoPin)>= threshold){
+      digitalWrite(13, LOW); // if room is light turn light off
+      Serial.println("LED OFF"); 
+    }
+}
